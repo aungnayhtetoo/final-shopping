@@ -1,0 +1,19 @@
+
+<div class="row" *ngIf="order$ | async as order">
+    <div class="col-sm-8">
+        <h2>Order # {{ id }}</h2>
+    </div>
+    <div class="col-sm-4 text-end">
+        <button class="btn btn-light" (click)="goBack()">Back</button>
+    </div>
+    
+    
+    <div class="col-sm-3">
+        <shipping-address [order]="order"></shipping-address>
+    </div>
+
+    <div class="col-9">
+        <check-out-card [order]="order"></check-out-card>
+    </div>
+</div>
+

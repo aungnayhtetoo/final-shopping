@@ -1,0 +1,23 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+      "category": {
+        ".read": true
+    },
+      "product": {
+    		".read": true
+  	},
+      "food": {
+    		".read": true
+  	},
+      "shopping-carts": {
+    		".read": true,
+        ".write": true
+    },
+      "orders": {
+        ".indexOn": "userId",
+        ".read": true,
+    }
+  }
+}

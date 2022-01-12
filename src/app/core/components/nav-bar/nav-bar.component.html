@@ -1,0 +1,18 @@
+<mat-toolbar color="accent">
+    <mat-toolbar-row>
+        <button mat-icon-button aria-label="Home icon button">
+            <mat-icon>menu</mat-icon>
+        </button>
+    
+        <span class="menu-span">Shopping Cart</span>
+        <span class="spacer"></span>
+
+        <button class="menu-button" mat-button [mat-menu-trigger-for]="username">Username</button>
+        <mat-menu #username="matMenu">
+            <button mat-menu-item routerLink="/orders">My Orders</button>
+            <button mat-menu-item routerLink="/admin/orders">Manage Orders</button>
+            <button mat-menu-item routerLink="/admin/products">Mangae Products</button>
+            <button mat-menu-item>Log Out</button>
+        </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>

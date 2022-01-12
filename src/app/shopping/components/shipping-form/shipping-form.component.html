@@ -1,0 +1,57 @@
+<form #shippingF='ngForm'>
+    <div class="form-group" *ngIf="userId">
+        <label for="name">Full Name</label>
+        <input #name="ngModel" [(ngModel)]="shipping.name"
+        type="text"
+        id="name"
+        name="name"
+        class="form-control"
+        required>
+        <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
+            <div *ngIf="name.errors.required">Name is required.</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="address">Address</label>
+        <input #address="ngModel" [(ngModel)]="shipping.address" 
+        type="text"
+        placeholder="Address line 1"
+        id="address"
+        name="address"
+        class="form-control"
+        required>
+        <div class="alert alert-danger" *ngIf="address.touched && address.invalid">
+            <div *ngIf="address.errors.required">Address Line 1 is required.</div>
+        </div>
+    </div>   
+    <div class="form-group">
+        <input #address2="ngModel" [(ngModel)]="shipping.address2" 
+        type="text"
+        placeholder="Address line 2"
+        id="address 2"
+        name="address 2"
+        class="form-control"
+        required>
+        <div class="alert alert-danger" *ngIf="address2.touched && address2.invalid">
+            <div *ngIf="address2.errors.required">Address Line 2 is required.</div>
+        </div>
+    </div>
+        
+    <div class="form-group">
+        <label for="city">City</label>
+        <input #city="ngModel" [(ngModel)]="shipping.city" 
+        type="text"
+        placeholder="City"
+        id="city"
+        name="city"
+        class="form-control"
+        required>
+        <div class="alert alert-danger" *ngIf="city.touched && city.invalid">
+            <div *ngIf="city.errors.required">City is required.</div>
+        </div>       
+    </div>
+
+    <div class="dropdown-divider"></div>
+    <button [disabled]="shippingF.invalid" class="btn btn-primary" (click)="productOrder()">Check Out</button>
+</form>

@@ -1,0 +1,33 @@
+
+<div class="row">
+  <div class="col-3">
+   <product-filter [category]="category"></product-filter>
+  </div>
+  <div class="col">
+    <div class="container">
+      <div class="row row-cols-3" *ngIf="cart$ | async as cart">
+        <ng-container *ngFor="let product of filteredProduct; let i = index">
+          <div class="col">
+            <product-card 
+              [shopping-cart] = "cart"
+              [product] = "product"></product-card>
+          </div>
+          <!-- <div *ngIf="(i + 1) % 1 === 0" class="w-100"></div> -->
+      
+        </ng-container>
+
+        <div class="progressIndicator" [style.display]="isProgressVisible ? 'inline' : 'none' ">
+          <mat-progress-spinner class=" example-margin" color="primary" mode="indeterminate"></mat-progress-spinner>
+        </div>
+      </div>
+    
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+
+

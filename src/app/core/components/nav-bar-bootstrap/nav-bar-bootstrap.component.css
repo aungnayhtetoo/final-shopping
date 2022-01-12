@@ -1,0 +1,22 @@
+li{
+    cursor: pointer;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.count-notif{
+    vertical-align:middle;
+    margin-left:-10px;
+    margin-top: -35px;
+    font-size: 10px;
+}
+
+.badge-warning{
+    padding:3px;
+}
+
+.navbar-light .navbar-brand {
+    color: peru;
+}

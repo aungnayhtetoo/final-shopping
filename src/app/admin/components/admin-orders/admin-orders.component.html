@@ -1,0 +1,28 @@
+<h1>Orders</h1>
+
+<table datatable 
+  class="row-border hover"
+  [dtOptions]="dtOptions"
+  [dtTrigger]="dtTrigger"
+  >
+      <thead>
+        <tr>
+          <th>Order #</th>
+          <th>Customer Name</th>
+          <th>Order Placed</th>
+          <th>Total Price</th>
+          <th></th>
+        </tr>
+      </thead>
+  
+      <tbody >
+        <tr *ngFor="let order of orderArr">
+            <td>{{ order.key }}</td>
+            <td>{{ order.shipping.name | titlecase}}</td>
+            <td>{{ order.datePlaced | date}}</td>
+            <td>{{ order.orderPrice | currency:'USD'}}</td>
+          <td>
+            <a [routerLink]="['/admin/orders', order.key]">View</a>
+        </td>
+      </tbody>
+  </table>

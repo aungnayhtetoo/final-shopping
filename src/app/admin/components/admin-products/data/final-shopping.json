@@ -1,0 +1,106 @@
+{
+  "category" : {
+    "gender" : {
+      "johnyy" : {
+        "name" : 1112
+      },
+      "men" : {
+        "bottom" : {
+          "name" : "Bottom Wear"
+        },
+        "pants" : {
+          "name" : "Pants and Shorts"
+        },
+        "shoes" : {
+          "name" : "Sneakers and Shoes"
+        },
+        "top" : {
+          "name" : "Top Wear"
+        }
+      },
+      "sammy" : {
+        "test" : "test1"
+      },
+      "women" : {
+        "bottom" : {
+          "name" : "Bottom Wear"
+        },
+        "pants" : {
+          "name" : "Pants and Skirts"
+        },
+        "shoes" : {
+          "name" : "Sneakers and Heels"
+        },
+        "top" : {
+          "name" : "Top Wear"
+        }
+      }
+    }
+  },
+  "food" : {
+    "apple" : {
+      "name" : "Zigge"
+    },
+    "bread" : {
+      "name" : "Bread"
+    },
+    "fruit" : {
+      "name" : "Fruits"
+    },
+    "spice" : {
+      "name" : "Spice and Sugar"
+    },
+    "vegetable" : {
+      "name" : "Vegetable"
+    },
+    "zap" : {
+      "name" : "Adam"
+    }
+  },
+  "product" : {
+    "-MeRKAlT5S_WuxYIyJBd" : {
+      "category" : "Fruits",
+      "imageUrl" : "https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg",
+      "price" : "1",
+      "title" : "fruit"
+    },
+    "-MeSOeMmZPpFb33zelHZ" : {
+      "category" : "Fruits",
+      "imageUrl" : "https://i0.hippopx.com/photos/849/381/254/napoli-bread-bread-food-dining-preview.jpg",
+      "price" : "25",
+      "title" : "Baked Bread"
+    },
+    "-MelDpJbBIwd9Jrjm6sp" : {
+      "category" : "Adam",
+      "imageUrl" : "https://i0.hippopx.com/photos/849/381/254/napoli-bread-bread-food-dining-preview.jpg",
+      "price" : "25",
+      "title" : "Baked Booty"
+    },
+    "afdsfasdfasfasdf" : {
+      "category" : "Fruits",
+      "imageUrl" : "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg",
+      "price" : "30",
+      "title" : "testError"
+    }
+  },
+  "users" : {
+    "VEsdYz8udnTYjBeewUPljiD4Us62" : {
+      "email" : "aungnayhtetoo37@gmail.com",
+      "name" : "Aung Nay Htet Oo"
+    },
+    "quhs3rXsFzMgVIRAu2GEz3Oy4w03" : {
+      "email" : "aungnay1999@gmail.com",
+      "isAdmin" : true,
+      "name" : "Aung Nay Htet Oo"
+    },
+    "testuser" : {
+      "email" : "adminTest@gmail.com",
+      "name" : "admin"
+    },
+    "v8BWcsnvFndsVK9C3N1SkVhLsmT2" : {
+      "email" : "tilt6969dame@gmail.com",
+      "isAdmin" : true,
+      "name" : "Tilt Dame"
+    }
+  }
+}

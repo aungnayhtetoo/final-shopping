@@ -1,0 +1,12 @@
+<div *ngIf="order">
+    <h2>{{ order.datePlaced | date }}</h2>
+    <h3>Shipping Address</h3>
+    <div class="float-start">
+        <ul class="list-unstyled">
+            <li>{{ order.shipping.name }}</li>
+            <li>{{ order.shipping.address }}</li>
+            <li>{{ order.shipping.address2 }}</li>
+            <li>{{ order.shipping.city }}</li>
+        </ul>
+    </div>
+</div>

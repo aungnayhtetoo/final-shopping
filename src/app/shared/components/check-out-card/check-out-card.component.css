@@ -1,0 +1,25 @@
+.price-col {
+    width: 200px;
+    text-align: right;
+}
+
+.card-header .fa {
+    transition: .3s transform ease-in-out;
+}
+
+.card-header .collapsed .fa {
+    transform: rotate(90deg);
+}
+
+.order-summary {
+    width: 100%;
+    padding-bottom: 0;
+    padding-top: 0;
+    height: 100%;
+}
+
+.order-summary>.mat-icon {
+    float: right;
+    margin-right: 10px;
+}
+

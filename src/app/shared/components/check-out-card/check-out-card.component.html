@@ -1,0 +1,100 @@
+
+<div class="card" *ngIf="cart">
+    <div class="card-header" id="heading">
+        <h5 class="mb-0" >
+            <button role="button" 
+            class="btn order-summary" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#collapseOrder" 
+            aria-expanded="true" 
+            aria-controls="collapseOrder"
+            (click)="toggleState  = !toggleState">
+                Order Summary <mat-icon class="right">{{toggleState? 'expand_more': 'expand_less'}}</mat-icon>
+            </button>
+        </h5>
+    </div>
+
+    
+
+    <div class="collapse show" id="collapseOrder">
+        <div class="card m3">
+            <div class="card-body">
+                <p class="card-text">You have {{ cart.totalItemsCount }} items in your shopping cart.</p>
+                <ul class="list-group-flush">
+                    <li class="list-group-item" *ngFor="let item of cart.items">
+                        {{ item.quantity }} x {{ item.title }}
+                        <div class="float-end">
+                            {{ item.totalPrice | currency:'USD' }}
+                        </div>
+                    </li>
+                    <li class="list-group-item fw-bold">
+                        Total
+                        <div class="float-end">
+                            {{ cart.totalCartPrice | currency:'USD'}}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card" *ngIf="order">
+    <div class="card-header" id="heading">
+        <h1 class="mb-0" >
+           Order Details
+        </h1>
+    </div>
+
+    <div>
+        <div class="card m3">
+            <div class="card-body">
+                <p class="card-text">{{ order.items.length }} items in order.</p>
+                <ul class="list-group-flush">
+                    <li class="list-group-item fw-bold">
+                        <div class="row">
+                            <div class="col-sm-6 text-start">
+                                Product
+                            </div>
+                            <div class="col-sm-2 text-start">
+                                Price
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                Qty
+                            </div>
+                            <div class="col-sm-2 text-end">
+                                Total
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item" *ngFor="let item of order.items">
+                        <div class="row">
+                            <div class="col-sm-6 text-start">
+                                {{ item.product.title }}
+                            </div>
+                            <div class="col-sm-2 text-start">
+                                {{ item.totalPrice | currency:'USD' }}
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                {{ item.quantity }}
+                            </div>
+                            <div class="text-end col-2">
+                                {{ item.totalPrice | currency:'USD' }}
+                            </div>
+                            
+                        </div>
+                    </li>
+                    <li class="list-group-item fw-bold">
+                        Total
+                        <div class="float-end">
+                            {{ order.orderPrice | currency:'USD'}}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    

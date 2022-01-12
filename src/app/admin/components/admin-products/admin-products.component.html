@@ -1,0 +1,66 @@
+<h1>Products</h1>
+
+<div>
+  <button routerLink="/admin/products/new" class="float-end btn btn-light">New Products</button>
+</div>
+
+<div class="divider">
+  <hr class="dropdown-divider">
+  <table datatable 
+  class="row-border hover"
+  [dtOptions]="dtOptions"
+  [dtTrigger]="dtTrigger"
+  >
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th></th>
+        </tr>
+      </thead>
+  
+      <tbody >
+        <tr *ngFor="let product of productArr">
+          <td>{{ product.key }}</td>
+          <td>{{ product.title | titlecase}}</td>
+          <td>{{ product.category | titlecase}}</td>
+          <td>{{ product.price | currency:'USD'}}</td>
+          <td>
+            <a [routerLink]="['/admin/products/', product.key]">Edit</a>
+        </td>
+      </tbody>
+  
+  </table>
+</div>
+
+
+<!-- <p><input type="text"
+  #query
+  (keyup)="filter(query.value)"
+  class="form-control"
+  placeholder="Search"></p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Category</th>
+            <th scope="col">Price</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pro of filterProducts">
+            <td scope="row">{{ pro.title }}</td>
+            <td>{{ pro.category }}</td>
+            <td>{{ pro.price }}</td>
+            <td>
+                <a [routerLink]="['/admin/products/', pro.key]">Edit</a>
+            </td>
+          </tr>
+    </tbody>
+</table> -->
+
+
